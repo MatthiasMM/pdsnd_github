@@ -89,31 +89,6 @@ def load_data(city, month, day):
         df = df[df['day_of_week'] == day.title()]
     return df
 
-def raw_data_display(df):
-    """Ask the user if he wants to see a preview of is data"""
-    preview =  str(input("Do you want to see a preview of your data? yes - no: ")).lower()
-    lower_bound = 0
-    upper_bound = 5
-
-    if preview == 'yes':
-        # display first 5 lines
-        print(df.iloc[lower_bound:upper_bound])
-        # Enter a loop to ask the user if hew wants to see additional 5 lines until he enters 'no'
-        while True:
-            preview =  str(input("Do you want to preview 5 more lines? yes - no: ")).lower()
-            if preview == 'yes':
-                lower_bound += 5
-                upper_bound += 5
-                print(df.iloc[lower_bound:upper_bound])
-            else:
-                # leave the data preview and move on
-                print("Alright let\'s head on then!")
-                break
-
-    # Proceed when no data preview is being requested
-    else:
-        print("Alrighty, no data preview it is!")
-
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -198,6 +173,32 @@ def user_stats(df):
     return(yob_erliest, yob_most_recent, yob_most_common)
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+
+def raw_data_display(df):
+    """Ask the user if he wants to see a preview of is data"""
+    preview =  str(input("Do you want to see a preview of your data? yes - no: ")).lower()
+    lower_bound = 0
+    upper_bound = 5
+
+    if preview == 'yes':
+        # display first 5 lines
+        print(df.iloc[lower_bound:upper_bound])
+        # Enter a loop to ask the user if hew wants to see additional 5 lines until he enters 'no'
+        while True:
+            preview =  str(input("Do you want to preview 5 more lines? yes - no: ")).lower()
+            if preview == 'yes':
+                lower_bound += 5
+                upper_bound += 5
+                print(df.iloc[lower_bound:upper_bound])
+            else:
+                # leave the data preview and move on
+                print("Alright let\'s head on then!")
+                break
+
+    # Proceed when no data preview is being requested
+    else:
+        print("Alrighty, no data preview it is!")
+
 
 def main():
     while True:
