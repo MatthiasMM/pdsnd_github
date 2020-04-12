@@ -11,4 +11,4 @@ My first submission had issues with the commit messages. Hence, I started a new 
 bikeshare.py
 
 ### Credits
-No credits.
+No credits
