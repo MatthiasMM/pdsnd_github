@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+This project was re-created on 12 April 2020.
 
 ### Project Title
-Replace the Project Title
+Git Submission no. 2
 
 ### Description
-Describe what your project is about and what it does
+My first submission had issues with the commit messages. Hence, I started a new project from scratch to redo that including proper commit messages according to the Udacity Git Commit Message Style Guide.
 
 ### Files used
-Include the files used
+bikeshare.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+No credits.
