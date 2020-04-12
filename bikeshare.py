@@ -21,7 +21,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
 
-    valid_cities = ['chicago', 'new york city', 'washington']
+    valid_cities = ['chicago', 'new york city', 'washington', 'all']
     while True:
         city =  str(input("Enter City Name Chicago, New York City or Washington: ")).lower()
         if city in valid_cities:
@@ -29,7 +29,7 @@ def get_filters():
             break
         else:
             print("Entry {} not found, please choose another city.".format(city))
-    
+
     valid_months = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
     while True:
         month =  str(input("Please enter a month. Choose from 'All, January, February, March, April, May, June': ")).lower()
@@ -72,7 +72,6 @@ def load_data(city, month, day):
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
 
-    # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
